@@ -13,6 +13,7 @@
         android:layout_height="@dimen/posts_avatar_size"
         android:layout_marginBottom="@dimen/common_spacing"
         android:contentDescription="@string/description_post_author_avatar"
+        android:src="@drawable/actual_avatar"
         app:layout_constraintBottom_toBottomOf="@id/barrier"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,13 +27,13 @@
         android:layout_marginEnd="@dimen/common_spacing"
         android:ellipsize="end"
         android:singleLine="true"
+        android:text="@string/autor"
         app:layout_constraintBottom_toTopOf="@+id/published"
         app:layout_constraintEnd_toStartOf="@id/menu"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:text="@sample/posts.json/data/author" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/published"
@@ -41,11 +42,11 @@
         android:layout_marginStart="@dimen/common_spacing"
         android:layout_marginEnd="@dimen/common_spacing"
         android:layout_marginBottom="@dimen/common_spacing"
+        android:text="@string/data"
         app:layout_constraintBottom_toBottomOf="@id/barrier"
         app:layout_constraintEnd_toStartOf="@id/menu"
         app:layout_constraintStart_toEndOf="@id/avatar"
-        app:layout_constraintTop_toBottomOf="@id/author"
-        tools:text="@sample/posts.json/data/published" />
+        app:layout_constraintTop_toBottomOf="@id/author" />
 
     <ImageButton
         android:id="@+id/menu"
@@ -71,38 +72,41 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
         android:autoLink="web"
+        android:text="@string/text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrier"
-        tools:text="@sample/posts.json/data/content" />
+        app:layout_constraintTop_toBottomOf="@id/barrier" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/likevk"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@string/like"
         app:layout_constraintStart_toStartOf="@+id/content"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        tools:srcCompat="@drawable/likevk" />
+        app:srcCompat="@drawable/likevk" />
 
     <NumberPicker
+        android:id="@+id/numberPicker5"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@string/number_of_likes"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/likevk"
         app:layout_constraintTop_toBottomOf="@+id/content" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/coment"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginStart="121dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@string/comment"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        tools:layout_editor_absoluteX="89dp"
-        tools:srcCompat="@drawable/comment" />
+        app:layout_editor_absoluteX="89dp"
+        app:srcCompat="@drawable/comment" />
 
     <NumberPicker
         android:id="@+id/numberPicker"
@@ -110,18 +114,20 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@string/number_of_comment"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/coment"
         app:layout_constraintTop_toBottomOf="@+id/content" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/repost"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_marginStart="220dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@string/repost"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        tools:layout_editor_absoluteX="190dp"
-        tools:srcCompat="@drawable/repost" />
+        app:layout_editor_absoluteX="190dp"
+        app:srcCompat="@drawable/repost" />
 
     <NumberPicker
         android:id="@+id/numberPicker2"
@@ -129,18 +135,18 @@
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@string/number_of_reposts"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/repost"
         app:layout_constraintTop_toBottomOf="@+id/content" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/look"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@string/look"
         app:layout_constraintEnd_toStartOf="@+id/numberPicker3"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        tools:srcCompat="@drawable/look" />
+        app:srcCompat="@drawable/look" />
 
     <NumberPicker
         android:id="@+id/numberPicker3"
