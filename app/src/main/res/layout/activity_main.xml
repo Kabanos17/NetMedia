@@ -105,7 +105,6 @@
         android:contentDescription="@string/comment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        app:layout_editor_absoluteX="89dp"
         app:srcCompat="@drawable/comment" />
 
     <NumberPicker
@@ -126,7 +125,6 @@
         android:contentDescription="@string/repost"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        app:layout_editor_absoluteX="190dp"
         app:srcCompat="@drawable/repost" />
 
     <NumberPicker
